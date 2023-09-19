@@ -1,0 +1,183 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.section-center {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 550px;
+    min-height: 350px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.1);
+    margin: 0 30px;
+}
+
+.section-center .grocery-form h3 {
+    font-size: 25px;
+    letter-spacing: 4px;
+    margin-top: 85px;
+    text-align: center;
+}
+
+.section-center .grocery-form {
+    width: 85%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-center .grocery-form .form-control {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.section-center .grocery-form .form-control input {
+    background-color: var(--cor-branca);
+    border: none;
+    font-size: 18px;
+    padding: 6px 16px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 100%;
+}
+
+.section-center .grocery-form .form-control input:focus {
+    outline: 0;
+    border: solid 2px var(--azul-claro);
+}
+
+.section-center .grocery-form .form-control button {
+    background-color: var(--azul-claro);
+    letter-spacing: 2px;
+    padding: 6px 16px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.grocery-container .grocery-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    max-height: 265px;
+    overflow: auto;
+}
+
+.grocery-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.grocery-list::-webkit-scrollbar-thumb {
+    border-radius: 45px;
+    background: var(--azul-claro);
+}
+
+.grocery-list::-webkit-scrollbar-track {
+    background: var(--cor-branca);
+}
+
+.grocery-container {
+    visibility: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.show-container {
+    visibility: visible;
+}
+
+.grocery-list .grocery-item {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    padding: 7px 0;
+    border-radius: 8px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.grocery-list .grocery-item:hover {
+    background-color: var(--cor-branca);
+}
+
+.grocery-list .grocery-item .edit-btn {
+    font-size: 15px;
+    color: var(--verde-claro);
+}
+
+.grocery-list .grocery-item .delete-btn {
+    margin-left: 10px;
+    font-size: 15px;
+    color: var(--vermelho);
+}
+
+.grocery-list .grocery-item .title {
+    width: 85%;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.grocery-container .btn-clear {
+    color: var(--vermelho);
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin: 35px 0;
+}
+
+.alert {
+    position: absolute;
+    top: 40px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 5px 12px;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.alert-error {
+    color: var(--vermelho);
+    background-color: rgb(254 202 202);
+}
+
+.alert-sucess {
+    color: var(--verde);
+    background-color: rgb(187 247 208);
+}
+
+@media (max-width: 400px) {
+    .alert {
+        top: 30px;
+    }
+
+    .section-center .grocery-form h3 {
+        font-size: 22px;
+    }
+
+    .grocery-container .grocery-list {
+        max-height: 180px;
+    }
+
+    .grocery-list .grocery-item .title {
+        width: 75%;
+        font-size: 15px;
+    }
+
+    .grocery-container .btn-clear {
+        font-size: 15px;
+    }
+}

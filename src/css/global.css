@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(226 232 240);
+    font-family: 'Raleway', sans-serif;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+:root {
+    --cor-branca: rgb(226 232 240);
+    --azul-claro: rgb(147 197 253);
+    --verde: rgb(34 197 94);
+    --verde-claro: #00FA9A;
+    --vermelho: #FF0000;
+}
